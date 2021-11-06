@@ -1,0 +1,145 @@
+/* import the the google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:tan;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+/* styling the heading */
+.heading{
+    border: solid black;
+    justify-content: center;
+    background-color: greenyellow;
+    font-style: italic;
+    box-shadow: brown 0 5px 10px;
+    border-radius: 50px;
+}
+/* hover the heading using hover function */
+.heading:hover{
+    color: blue;
+    cursor: pointer;
+    transform: rotateX(35deg);
+    transform: rotateY(35deg);
+
+}
+
+/* styling the button of the btn id in the magic class */
+.magic{
+    background-color: red;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    border: solid grey;
+    border-radius: 26px;
+    font-size: 17px;
+    padding: 10px 14px;
+    cursor: pointer;
+    position: fixed;
+    top: 2px;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 6px brown;
+    z-index: 100;
+}
+/* hover the button */
+.magic:hover{
+    cursor: pointer;
+    background-color: brown;
+    transform: rotateX(25deg);
+    transform: rotateY(20deg);
+}
+
+.magic:focus
+{
+    outline: none;
+}
+
+.magic:active{
+    box-shadow: none;
+    transform: translateY(3px);
+}
+/* styling the box */
+.boxes
+{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+/* styling the big boxes */
+.boxes big {
+    height: 600px;
+    width: 600px;
+}
+
+.boxes.big .boxes {
+    transform:rotateZ(360deg);
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transition: 0.4s ease;
+  }
+  
+  .boxes.big {
+    width: 600px;
+    height: 600px;
+  }
+  
+  .boxes.big .box {
+    transform: rotateZ(360deg);
+  }
+  
+  /* insert the gif of the diwali logo of the box */
+  .box {
+    background-image: url('https://media.giphy.com/media/Ve1cBYXUmh6iyuYSnF/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    position: relative;
+    height: 125px;
+    width: 125px;
+    transition: 0.4s ease;
+  }
+
+  /* this is styling when the button is clicked */
+  .box::after {
+    content: '';
+    background-color:yellow;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform: skewY(45deg);
+  }
+    /* this is styling when the button is clicked */
+    .box::before {
+    content: '';
+    background-color:green;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
+  }
+
